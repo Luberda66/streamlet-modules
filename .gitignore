@@ -1,0 +1,41 @@
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup files
+*.bak
+*.backup
+
+# Test files
+test/
+testing/
+*.test.json
+
+# Personal configuration
+config.local.json
+secrets.json
+
+# Node modules (if using any build tools)
+node_modules/
+package-lock.json
+
+# Python cache (if using any Python tools)
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+*.log
+logs/

@@ -1,0 +1,62 @@
+{
+  "id": "nazev-modulu",
+  "media": ["movies", "series"],
+  "type": ["stream"],
+  "name": "Zobrazovaný název",
+  "website": "https://example.com/",
+  "repository": "https://raw.githubusercontent.com/username/streamlet-modules/main/kategorie/nazev-modulu.json",
+  "author": "VašeJméno",
+  "version": "1.0.0",
+  "description": "Popis modulu - co poskytuje a jak funguje.",
+  "baseUrl": "https://api.example.com",
+  "responseFormat": "json",
+  "headers": {
+    "accept": "application/json",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  "config": {
+    "apiKey": {
+      "type": "string",
+      "label": "{apiKey}",
+      "default": "",
+      "required": false
+    }
+  },
+  "api": [
+    {
+      "name": "Vyhledávání",
+      "type": "stream_search",
+      "method": "GET",
+      "url": "/search?q={title}&limit=50",
+      "response": {
+        "itemsKey": "results",
+        "mapping": {
+          "id": "id",
+          "name": "title",
+          "type": "video",
+          "size": "filesize",
+          "ratingUp": "likes",
+          "link": "download_url"
+        },
+        "status": {
+          "path": "status",
+          "states": {
+            "ok": "success",
+            "error": "server_error"
+          }
+        }
+      }
+    },
+    {
+      "name": "Získání linku",
+      "type": "link",
+      "method": "GET",
+      "url": "/file/{id}/download",
+      "response": {
+        "mapping": {
+          "link": "download_url"
+        }
+      }
+    }
+  ]
+}
