@@ -6,7 +6,7 @@
   "website": "https://blaniok.azurewebsites.net/",
   "repository": "https://raw.githubusercontent.com/Luberda66/streamlet-modules/main/stream/prehraj-to.json",
   "author": "Olbrasoft / Luberda66",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "description": "Přehraj.to stream provider via Blaniok proxy API (no login required).",
   "baseUrl": "https://blaniok.azurewebsites.net",
   "responseFormat": "json",
@@ -15,8 +15,8 @@
   },
   "api": [
     {
-      "name": "Vyhledávání",
-      "type": "stream_search",
+      "name": "Vyhledávání (detail)",
+      "type": "detail_stream_search",
       "method": "GET",
       "url": "/api/search?q={title}",
       "response": {
@@ -32,8 +32,8 @@
       }
     },
     {
-      "name": "Získání streamu",
-      "type": "link",
+      "name": "Získání streamu (detail)",
+      "type": "detail_stream_link",
       "method": "GET",
       "url": "/api/proxy?url={id}",
       "response": {
