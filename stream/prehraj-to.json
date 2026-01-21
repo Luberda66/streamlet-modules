@@ -1,44 +1,42 @@
 {
-  "id": "prehraj-to",
+  "id": "test-endpoints",
   "media": ["movies", "series"],
   "type": ["stream"],
-  "name": "Přehraj.to (proxy)",
-  "website": "https://blaniok.azurewebsites.net/",
-  "repository": "https://raw.githubusercontent.com/Luberda66/streamlet-modules/main/stream/prehraj-to.json",
-  "author": "Olbrasoft / Luberda66",
-  "version": "2.1.0",
-  "description": "Přehraj.to stream provider via Blaniok proxy API (no login required).",
-  "baseUrl": "https://blaniok.azurewebsites.net",
+  "name": "TEST Endpointy",
+  "website": "https://jsonplaceholder.typicode.com/",
+  "repository": "https://raw.githubusercontent.com/Luberda66/streamlet-modules/main/stream/test.json",
+  "author": "Luberda66",
+  "version": "1.0.0",
+  "description": "Test modulu pre zistenie, aké typy endpointov Streamlet volá.",
+  "baseUrl": "https://jsonplaceholder.typicode.com",
   "responseFormat": "json",
-  "headers": {
-    "accept": "application/json"
-  },
+  "headers": { "accept": "application/json" },
   "api": [
     {
-      "name": "Vyhledávání (detail)",
+      "name": "Detail search",
       "type": "detail_stream_search",
       "method": "GET",
-      "url": "/api/search?q={title}",
+      "url": "/posts",
       "response": {
-        "itemsKey": "movies",
+        "itemsKey": "",
         "mapping": {
-          "id": "url",
+          "id": "id",
           "name": "title",
           "type": "video",
           "size": "",
           "ratingUp": "",
-          "link": "url"
+          "link": "id"
         }
       }
     },
     {
-      "name": "Získání streamu (detail)",
+      "name": "Detail link",
       "type": "detail_stream_link",
       "method": "GET",
-      "url": "/api/proxy?url={id}",
+      "url": "/posts/{id}",
       "response": {
         "mapping": {
-          "link": "videoUrl"
+          "link": "id"
         }
       }
     }
