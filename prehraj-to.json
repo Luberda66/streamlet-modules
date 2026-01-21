@@ -4,7 +4,7 @@
   "type": ["stream"],
   "name": "Přehraj.to",
   "website": "https://prehrajto.cz/",
-  "repository": "https://raw.githubusercontent.com/4m4t3rCZ/streamlet-modules/main/stream/prehraj-to.json",
+  "repository": "https://raw.githubusercontent.com/Luberda66/streamlet-modules/main/stream/prehraj-to.json",
   "author": "AnyoneCanCode",
   "version": "1.0.1",
   "description": "Přehraj.to stream provider for movies and series (scraper).",
